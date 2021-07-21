@@ -84,10 +84,7 @@ type Tag struct {
 }
 
 func (t Tag) HasLink() bool {
-	if t.Link != "" {
-		return true
-	}
-	return false
+	return t.Link != ""
 }
 
 type Note struct {

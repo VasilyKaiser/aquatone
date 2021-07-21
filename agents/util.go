@@ -11,7 +11,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/michenriksen/aquatone/core"
+	"github.com/VasilyKaiser/aquatone/core"
 
 	"github.com/fatih/color"
 	"github.com/parnurzeal/gorequest"

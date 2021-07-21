@@ -10,10 +10,10 @@ import (
 	"strings"
 	"time"
 
+	"github.com/VasilyKaiser/aquatone/agents"
+	"github.com/VasilyKaiser/aquatone/core"
+	"github.com/VasilyKaiser/aquatone/parsers"
 	"github.com/google/uuid"
-	"github.com/michenriksen/aquatone/agents"
-	"github.com/michenriksen/aquatone/core"
-	"github.com/michenriksen/aquatone/parsers"
 )
 
 var (

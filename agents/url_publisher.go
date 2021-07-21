@@ -6,7 +6,7 @@ import (
 	"net"
 	"time"
 
-	"github.com/michenriksen/aquatone/core"
+	"github.com/VasilyKaiser/aquatone/core"
 )
 
 type URLPublisher struct {

@@ -84,7 +84,7 @@ func staticReport_templateHtml() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/report_template.html", size: 31308, mode: os.FileMode(420), modTime: time.Unix(1558255764, 0)}
+	info := bindataFileInfo{name: "static/report_template.html", size: 31308, mode: os.FileMode(0644), modTime: time.Unix(1558255764, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -104,7 +104,7 @@ func staticWappalyzer_fingerprintsJson() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/wappalyzer_fingerprints.json", size: 612701, mode: os.FileMode(420), modTime: time.Unix(1556350182, 0)}
+	info := bindataFileInfo{name: "static/wappalyzer_fingerprints.json", size: 612701, mode: os.FileMode(0644), modTime: time.Unix(1556350182, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -161,7 +161,7 @@ func AssetNames() []string {
 
 // _bindata is a table, holding each asset generator, mapped to its name.
 var _bindata = map[string]func() (*asset, error){
-	"static/report_template.html": staticReport_templateHtml,
+	"static/report_template.html":         staticReport_templateHtml,
 	"static/wappalyzer_fingerprints.json": staticWappalyzer_fingerprintsJson,
 }
 
@@ -204,10 +204,11 @@ type bintree struct {
 	Func     func() (*asset, error)
 	Children map[string]*bintree
 }
+
 var _bintree = &bintree{nil, map[string]*bintree{
-	"static": &bintree{nil, map[string]*bintree{
-		"report_template.html": &bintree{staticReport_templateHtml, map[string]*bintree{}},
-		"wappalyzer_fingerprints.json": &bintree{staticWappalyzer_fingerprintsJson, map[string]*bintree{}},
+	"static": {nil, map[string]*bintree{
+		"report_template.html":         {staticReport_templateHtml, map[string]*bintree{}},
+		"wappalyzer_fingerprints.json": {staticWappalyzer_fingerprintsJson, map[string]*bintree{}},
 	}},
 }}
 
@@ -257,4 +258,3 @@ func _filePath(dir, name string) string {
 	cannonicalName := strings.Replace(name, "\\", "/", -1)
 	return filepath.Join(append([]string{dir}, strings.Split(cannonicalName, "/")...)...)
 }
-
